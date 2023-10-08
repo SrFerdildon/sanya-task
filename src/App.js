@@ -13,6 +13,7 @@ export default function App() {
 	const decrease = () => {
 		setCounter(count => count + 2);
 		console.log("Таки шо?");
+		alert("Таки шо?");
 	};
 
 	//reset counter 
