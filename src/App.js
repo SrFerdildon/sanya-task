@@ -22,7 +22,7 @@ export default function App() {
 	}
 
 	return (
-		<div>
+		<div className='center'>
 			<h1>Занять</h1>
 			<span>{counter}</span>
 			<div>
