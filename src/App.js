@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { React, useState } from 'react'
+import "./App.css"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+	const [counter, setCounter] = useState(0);
+
+	//increase counter
+	const increase = () => {
+		setCounter(count => count + 1);
+	};
+
+	//decrease counter
+	const decrease = () => {
+		setCounter(count => count + 2);
+		console.log("Таки шо?");
+	};
+
+	//reset counter 
+	const reset = () => {
+		setCounter(0)
+	}
+
+	return (
+		<div>
+			<h1>Занять</h1>
+			<span>{counter}</span>
+			<div>
+				<button onClick={increase}>+</button>
+				<button onClick={decrease}>-</button>
+				<button onClick={reset}>Сброс</button>
+			</div>
+		</div>
+	);
 }
-
-export default App;
